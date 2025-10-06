@@ -1,0 +1,35 @@
+.container h2 {
+  color: #41ff70;
+}
+.container p {
+  color: #adff87;
+}
+
+.container-secundario h2 {
+  color: wheat;
+}
+.container-secundario p {
+  color: wheat;
+}
+
+body {
+  background-color: #a0a0a0;
+}
+
+.container-secundario {
+  background-color: #6b0000;
+  padding: 5px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 2px;
+}
+
+.container {
+  background-color: #6b0000;
+  padding: 5px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 2px;
+}
+
+/*# sourceMappingURL=style.css.map */
