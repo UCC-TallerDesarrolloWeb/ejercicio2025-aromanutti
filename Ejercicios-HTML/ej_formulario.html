@@ -23,61 +23,86 @@
 <form name="subscribirse">
     <fieldset>
         <legend>Datos personales</legend>
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+        <p>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" size="40" maxlength="40" placeholder="Ingrese su nombre" required><br>
+        </p>
 
-        <label for="apellido">Apellido:</label><br>
-        <input type="text" id="apellido" name="apellido" required><br><br>
+        <p>
+            <label for="apellido">Apellido:</label><br>
+            <input type="text" id="apellido" name="apellido" size="40" maxlength="40" placeholder="Ingrese su apellido" required><br>
+        </p>
 
-        <label>Sexo:</label><br>
-        <input type="radio" id="sexo-m" name="sexo" value="masculino" checked>
-        <label for="sexo-m">Masculino</label>
-        <input type="radio" id="sexo-f" name="sexo" value="femenino">
-        <label for="sexo-f">Femenino</label><br><br>
+        <p>
+            <label>Sexo:</label><br>
+            <input type="radio" id="sexo-m" name="sexo" value="masculino" checked>
+            <label for="sexo-m">Masculino</label>
+            <input type="radio" id="sexo-f" name="sexo" value="femenino">
+            <label for="sexo-f">Femenino</label><br>
+        </p>
 
-        <label for="edad">Edad:</label><br>
-        <input type="number" id="edad" name="edad" min="0" max="120"><br><br>
+        <p>
+            <label for="edad">Edad:</label><br>
+            <input type="number" id="edad" name="edad" min="0" max="120" maxlength="3" placeholder="Ej: 25"><br>
+        </p>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" size="40" maxlength="50" placeholder="usuario@ejemplo.com" required><br>
+        </p>
     </fieldset>
 
     <fieldset>
         <legend>Cuenta</legend>
-        <label for="usuario">Usuario:</label><br>
-        <input type="text" id="usuario" name="usuario" required><br><br>
+        <p>
+            <label for="usuario">Usuario:</label><br>
+            <input type="text" id="usuario" name="usuario" size="40" maxlength="30" placeholder="Nombre de usuario" required><br>
+        </p>
 
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
+        <p>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" size="40" maxlength="20" placeholder="Contraseña segura" required><br>
+        </p>
 
-        <label for="confirm">Confirmar Password:</label><br>
-        <input type="password" id="confirm" name="confirm" required><br><br>
+        <p>
+            <label for="confirm">Confirmar Password:</label><br>
+            <input type="password" id="confirm" name="confirm" size="40" maxlength="20" placeholder="Repetir contraseña" required><br>
+        </p>
     </fieldset>
 
     <fieldset>
         <legend>Preferencias</legend>
-        <label>Tipo de servicio:</label><br>
-        <select name="servicio" id="servicio">
-            <option value="free">Free</option>
-            <option value="standard">Standard</option>
-            <option value="premium">Premium</option>
-        </select><br><br>
+        <p>
+            <label>Tipo de servicio:</label><br>
+            <select name="servicio" id="servicio">
+                <option value="">Seleccione un tipo de servicio</option>
+                <option value="free">Free</option>
+                <option value="standard">Standard</option>
+                <option value="premium">Premium</option>
+            </select><br>
+        </p>
 
-        <label>Tema(s) de interés:</label><br>
-        <input type="checkbox" id="tema-politica" name="tema" value="politica">
-        <label for="tema-politica">Política</label><br>
-        <input type="checkbox" id="tema-negocios" name="tema" value="negocios">
-        <label for="tema-negocios">Negocios</label><br>
-        <input type="checkbox" id="tema-tec" name="tema" value="tecnologia">
-        <label for="tema-tec">Tecnología</label><br>
-        <input type="checkbox" id="tema-salud" name="tema" value="salud">
-        <label for="tema-salud">Salud</label><br><br>
+        <p>
+            <label>Tema(s) de interés:</label><br>
+            <input type="checkbox" id="tema-politica" name="tema" value="politica">
+            <label for="tema-politica">Política</label><br>
+            <input type="checkbox" id="tema-negocios" name="tema" value="negocios">
+            <label for="tema-negocios">Negocios</label><br>
+            <input type="checkbox" id="tema-tec" name="tema" value="tecnologia">
+            <label for="tema-tec">Tecnología</label><br>
+            <input type="checkbox" id="tema-salud" name="tema" value="salud">
+            <label for="tema-salud">Salud</label><br>
+        </p>
 
-        <label for="comentario">Agregue un comentario:</label><br>
-        <textarea id="comentario" name="comentario" rows="4" cols="40"></textarea><br><br>
+        <p>
+            <label for="comentario">Agregue un comentario:</label><br>
+            <textarea id="comentario" name="comentario" rows="4" cols="40" maxlength="500" placeholder="Escriba aquí sus comentarios adicionales..."></textarea><br>
+        </p>
     </fieldset>
 
-    <button type="submit">Enviar</button>
+    <p>
+        <button type="submit">Enviar</button>
+    </p>
 </form>
 </body>
 </html>
