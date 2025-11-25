@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="tienda.js"></script>
+    <title>Catalogo Taekwondo</title>
+</head>
+<body class="grid-container" onload="mostrarCatalogo()">
+    <header class="item1">
+        <h1>Taekwondo store</h1>
+    </header>
+    <nav class="item2">
+        <a href="">Catalogo de productos</a>
+        <a href="carrito.html">Carrito de compras</a>
+    </nav>
+    <aside class="item3">
+        <fieldset>  
+            <legend>Búsqueda</legend>
+            <label for="search">Buscar:</label>
+            <input 
+                type="text" 
+                id="search" 
+                name="search" 
+                placeholder="Buscar..." 
+                onchange="filtrarProducto()"
+            >
+        </fieldset>
+        <fieldset>
+            <legend>Precios</legend>
+            <p>
+                <label for="price-min">Minimo:</label>
+                <input type="number" id="price-min" name="price-min" min="0" onchange="filtrarProducto()">
+            </p>
+            <p>
+                <label for="price-max">Máximo:</label>
+                <input type="number" id="price-max" name="price-max" min="0" onchange="filtrarProducto()">
+            </p>
+        </fieldset>
+        <fieldset>  
+            <legend>Tipos de producots</legend>
+            <p>
+                <input type="checkbox" id="protectores" name="protectores" onchange="filtrarProducto()">
+                <label for="protectores">Protectores</label>
+            </p>
+            <p>
+                <input type="checkbox" id="entrenamiento" name="entrenamiento" onchange="filtrarProducto()">
+                <label for="entrenamiento">Entrenamiento</label>
+            </p>
+            <p>
+                <input type="checkbox" id="dobok" name="dobok" onchange="filtrarProducto()">
+                <label for="dobok">Dobok</label>
+            </p>
+        </fieldset>
+        <fieldset>  
+            <legend>Marca</legend>
+            <select id="marca" onchange="filtrarProducto()">
+                <option value="Todas">Todas</option>
+                <option value="Gran Marc">Gran Marc</option>
+                <option value="Daedo">Daedo</option>
+            </select>
+        </fieldset>
+        <select id="order" onchange="orderCatalog(this.value)">
+            <option disabled value="">Seleccione un orden</option>
+            <option value="menor">Precio - de menor a mayor</option>
+            <option value="mayor">Precio - de mayor a menor</option>
+            <option value="a-z">Nombre - de la A a la Z</option>
+            <option value="z-a">Nombre - de la Z a la A</option>
+        </select>
+    </aside>
+
+    <dialog id="detalles">
+        <h2>Detalle del producto</h2>
+        <h3 id="detalles__titulo"></h3>
+        <p id="detalles__descripcion"></p>
+        <p id="detalles__precio"></p>
+        <button type="button" onclick="cerrarModal()">Cerrar</button>
+    </dialog>
+
+    <main class="item4" id="lista-productos">
+        <!-- Contenido generado dinamicamente -->
+    </main>
+</body>
+</html>
