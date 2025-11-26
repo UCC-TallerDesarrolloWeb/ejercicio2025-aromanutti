@@ -5,7 +5,6 @@
     <title>Operaciones Matemáticas</title>
     <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
     <link href="miEstilo.css" type="text/css" rel="stylesheet">
-    <script type="text/javascript" src="misFunciones.js"></script>
 </head>
 <body class="body-num">
 
@@ -13,34 +12,60 @@
     <h1>Operaciones Matemáticas</h1>
     <form class="operacionesMat">
         <p>
-            <input id="nums1" type="text" name="sum_num1">
+            <input id="nums1" type="number" name="sum_num1" onchange="suma()">
             +
-            <input id="nums2" type="text" name="sum_num2">
+            <input id="nums2" type="number" name="sum_num2" onchange="suma()">
             =
-            <input id="totalS" type="text" name="sum_total">
+            <input id="totalS" type="number" name="sum_total" disabled>
         </p>
         <p>
-            <input id="numr1" type="text" name="res_num1">
+            <input id="numr1" type="number" name="res_num1" onchange="resta()">
             -
-            <input id="numr2" type="text" name="res_num2">
+            <input id="numr2" type="number" name="res_num2" onchange="resta()">
             =
-            <input id="totalR" type="text" name="res_total">
+            <input id="totalR" type="number" name="res_total" disabled>
         </p>
         <p>
-            <input id="numm1" type="text" name="mul_num1">
+            <input id="numm1" type="number" name="mul_num1" onchange="multiplicacion()">
             x
-            <input id="numm2" type="text" name="mul_num2">
+            <input id="numm2" type="number" name="mul_num2" onchange="multiplicacion()">
             =
-            <input id="totalM" type="text" name="mul_total">
+            <input id="totalM" type="number" name="mul_total" disabled>
         </p>
         <p>
-            <input id="numd1" type="text" name="div_num1">
+            <input id="numd1" type="number" name="div_num1" onchange="division()">
             /
-            <input id="numd2" type="text" name="div_num2">
+            <input id="numd2" type="number" name="div_num2" onchange="division()">
             =
-            <input id="totalD" type="text" name="div_total">
+            <input id="totalD" type="number" name="div_total" disabled>
         </p>
     </form>
 </div>
+    <script>
+
+        const suma = () => {
+            let n1 = parseFloat(document.getElementById("nums1").value) || 0;
+            let n2 = parseFloat(document.getElementById("nums2").value) || 0;
+            document.getElementById("totalS").value = n1 + n2;
+        };
+        
+        const resta = () => {
+            let n1 = parseFloat(document.getElementById("numr1").value) || 0;
+            let n2 = parseFloat(document.getElementById("numr2").value) || 0;
+            document.getElementById("totalR").value = n1 - n2;
+        };
+        
+        const multiplicacion = () => {
+            let n1 = parseFloat(document.getElementById("numm1").value) || 0;
+            let n2 = parseFloat(document.getElementById("numm2").value) || 0;
+            document.getElementById("totalM").value = n1 * n2;
+        };
+        
+        const division = () => {
+            let n1 = parseFloat(document.getElementById("numd1").value) || 0;
+            let n2 = parseFloat(document.getElementById("numd2").value) || 0;
+            document.getElementById("totalD").value = n1 / n2;
+        };
+    </script>
 </body>
 </html>
