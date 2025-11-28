@@ -12,6 +12,7 @@
     <style>
         form{
             width: 70%;
+            margin: 20px;
         }
     </style>
 </head>
@@ -21,11 +22,11 @@
     <form>
         <div class="form-group">
             <label for="input_nombre">Nombre:</label>
-            <input type="text" class="form-control" id="input_nombre" aria-describedby="nombre" placeholder="Ingrese su Nombre">
+            <input type="text" class="form-control" id="input_nombre" aria-describedby="nombre" placeholder="Ingrese su Nombre" maxlength="30">
         </div>
         <div class="form-group">
             <label for="input_apellido">Apellido:</label>
-            <input type="text" class="form-control" id="input_apellido" aria-describedby="apellido" placeholder="Ingrese su Apellido">
+            <input type="text" class="form-control" id="input_apellido" aria-describedby="apellido" placeholder="Ingrese su Apellido" maxlength="50">
         </div>
 
         <div class="form-check form-check-inline">
@@ -39,25 +40,25 @@
 
         <div class="form-group">
             <label for="input_edad">Edad:</label>
-            <input type="text" class="form-control" id="input_edad" aria-describedby="edad" placeholder="Ingrese su Edad">
+            <input type="text" class="form-control" id="input_edad" aria-describedby="edad" placeholder="Ingrese su Edad" maxlength="3">
         </div>
 
         <div class="form-group">
             <label for="input_nombre">Email:</label>
-            <input type="email" class="form-control" id="input_email" aria-describedby="email" placeholder="Ingrese su email">
+            <input type="email" class="form-control" id="input_email" aria-describedby="email" placeholder="Ingrese su email" maxlength="50">
         </div>
 
         <div class="form-group">
             <label for="input_usuario">Usuario:</label>
-            <input type="text" class="form-control" id="input_usuario" aria-describedby="usuario" placeholder="Ingrese su Usuario">
+            <input type="text" class="form-control" id="input_usuario" aria-describedby="usuario" placeholder="Ingrese su Usuario" maxlength="30">
         </div>
         <div class="form-group">
             <label for="input_password">Password:</label>
-            <input type="password" class="form-control" id="input_password" aria-describedby="password" placeholder="Ingrese su Password">
+            <input type="password" class="form-control" id="input_password" aria-describedby="password" placeholder="Ingrese su Password" maxlength="20">
         </div>
         <div class="form-group">
             <label for="input_conf-password">Confirmar Password:</label>
-            <input type="password" class="form-control" id="input_conf-password" aria-describedby="confirmar password" placeholder="Ingrese su Password">
+            <input type="password" class="form-control" id="input_conf-password" aria-describedby="confirmar password" placeholder="Ingrese su Password" maxlength="20">
         </div>
 
         <div class="form-check form-check-inline">
@@ -84,8 +85,8 @@
         </div>
 
         <div class="form-group">
-            <label for="textarea_comentario">Agregue un comentario:</label>
-            <textarea class="form-control" id="textarea_comentario" rows="3"></textarea>
+            <label for="textarea_comentario">Agregue un comentario (200 caracteres max) :</label>
+            <textarea class="form-control" id="textarea_comentario" rows="3" maxlength="200"></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary mb-2">Enviar</button>

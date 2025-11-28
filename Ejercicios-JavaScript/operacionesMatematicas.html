@@ -16,28 +16,28 @@
             +
             <input id="nums2" type="number" name="sum_num2" onchange="suma()">
             =
-            <input id="totalS" type="number" name="sum_total" disabled>
+            <span id="totalS"></span>
         </p>
         <p>
             <input id="numr1" type="number" name="res_num1" onchange="resta()">
             -
             <input id="numr2" type="number" name="res_num2" onchange="resta()">
             =
-            <input id="totalR" type="number" name="res_total" disabled>
+            <span id="totalR"></span>
         </p>
         <p>
             <input id="numm1" type="number" name="mul_num1" onchange="multiplicacion()">
             x
             <input id="numm2" type="number" name="mul_num2" onchange="multiplicacion()">
             =
-            <input id="totalM" type="number" name="mul_total" disabled>
+            <span id="totalM"></span>
         </p>
         <p>
             <input id="numd1" type="number" name="div_num1" onchange="division()">
             /
             <input id="numd2" type="number" name="div_num2" onchange="division()">
             =
-            <input id="totalD" type="number" name="div_total" disabled>
+            <span id="totalD"></span>
         </p>
     </form>
 </div>
@@ -46,25 +46,25 @@
         const suma = () => {
             let n1 = parseFloat(document.getElementById("nums1").value) || 0;
             let n2 = parseFloat(document.getElementById("nums2").value) || 0;
-            document.getElementById("totalS").value = n1 + n2;
+            document.getElementById("totalS").innerHTML = n1 + n2;
         };
         
         const resta = () => {
             let n1 = parseFloat(document.getElementById("numr1").value) || 0;
             let n2 = parseFloat(document.getElementById("numr2").value) || 0;
-            document.getElementById("totalR").value = n1 - n2;
+            document.getElementById("totalR").innerHTML = n1 - n2;
         };
         
         const multiplicacion = () => {
             let n1 = parseFloat(document.getElementById("numm1").value) || 0;
             let n2 = parseFloat(document.getElementById("numm2").value) || 0;
-            document.getElementById("totalM").value = n1 * n2;
+            document.getElementById("totalM").innerHTML = n1 * n2;
         };
         
         const division = () => {
             let n1 = parseFloat(document.getElementById("numd1").value) || 0;
             let n2 = parseFloat(document.getElementById("numd2").value) || 0;
-            document.getElementById("totalD").value = n1 / n2;
+            document.getElementById("totalD").innerHTML = n1 / n2;
         };
     </script>
 </body>

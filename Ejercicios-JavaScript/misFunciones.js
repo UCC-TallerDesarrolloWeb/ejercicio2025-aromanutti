@@ -9,11 +9,14 @@ let convertirUnidades = (unidad, valor) => {
     let metro, pie, pulgada, yarda;
 
     console.log(valor);
-    console.log(isNaN(valor))
-
-    if(valor.includes(",")) {
+    
+    if (typeof valor === "string") {
         valor = valor.replace(",", ".");
     }
+
+    valor = parseFloat(valor);
+    console.log(typeof valor);
+
 
     if(isNaN(valor)) {
         alert("El valor ingresaod no es un numero valido")
